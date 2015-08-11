@@ -78,6 +78,9 @@ class SpeedTestVC: UIViewController, UICollectionViewDataSource,
         }
     }
 
+    @IBAction func dismissVC(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func collectionView(collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int

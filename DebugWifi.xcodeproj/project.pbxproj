@@ -115,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				E9B384251B5D999F00FC4F1E /* Main.storyboard */,
-				E9744B1C1B7A7DE50040CFAC /* MainScreenVC.swift */,
 				E9B3842A1B5D999F00FC4F1E /* LaunchScreen.xib */,
 			);
 			name = StoryBoards;
@@ -124,6 +123,7 @@
 		E940EA041B73E8D8006A424E /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				E9744B1C1B7A7DE50040CFAC /* MainScreenVC.swift */,
 				E9CB5F411B6028700016BCE3 /* NearbyDeviceCollectionViewCell.swift */,
 			);
 			name = MainScreen;

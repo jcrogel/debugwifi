@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-O5-WBc">
-                                <rect key="frame" x="93" y="108" width="77" height="30"/>
+                                <rect key="frame" x="93" y="285" width="77" height="30"/>
                                 <state key="normal" title="Speed Test">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6e-U6-Awj">
-                                <rect key="frame" x="80" y="202" width="90" height="30"/>
+                                <rect key="frame" x="93" y="342" width="90" height="30"/>
                                 <state key="normal" title="Test Network">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -39,13 +39,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="m6e-U6-Awj" firstAttribute="leading" secondItem="kKV-4y-gIA" secondAttribute="leadingMargin" constant="64" id="8sT-J5-Kwz"/>
                             <constraint firstItem="rHj-O5-WBc" firstAttribute="width" secondItem="kKV-4y-gIA" secondAttribute="width" id="9Dy-Tv-sli"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rHj-O5-WBc" secondAttribute="trailing" constant="245" id="9nx-mS-aqE"/>
+                            <constraint firstItem="rHj-O5-WBc" firstAttribute="centerY" secondItem="kKV-4y-gIA" secondAttribute="centerY" id="HOe-Ks-wVV"/>
+                            <constraint firstItem="m6e-U6-Awj" firstAttribute="top" secondItem="rHj-O5-WBc" secondAttribute="bottom" constant="27" id="JPo-gd-Cce"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m6e-U6-Awj" secondAttribute="trailing" constant="234" id="SiN-PF-Tcr"/>
-                            <constraint firstItem="rHj-O5-WBc" firstAttribute="top" secondItem="5CZ-Yb-2VX" secondAttribute="bottom" constant="88" id="gBi-zL-J9b"/>
-                            <constraint firstItem="m6e-U6-Awj" firstAttribute="top" secondItem="5CZ-Yb-2VX" secondAttribute="bottom" constant="182" id="q8P-tP-TAK"/>
-                            <constraint firstItem="rHj-O5-WBc" firstAttribute="leading" secondItem="kKV-4y-gIA" secondAttribute="leadingMargin" constant="77" id="voI-th-3PJ"/>
+                            <constraint firstItem="rHj-O5-WBc" firstAttribute="leading" secondItem="kKV-4y-gIA" secondAttribute="leadingMargin" constant="77" id="VUi-Uo-cSf"/>
+                            <constraint firstItem="rHj-O5-WBc" firstAttribute="leading" secondItem="m6e-U6-Awj" secondAttribute="leading" id="wGC-Kq-rcZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -63,7 +63,7 @@
         <!--Speed TestVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SpeedTestVC" customModule="DebugWifi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpeedTestVC" id="BYZ-38-t0r" customClass="SpeedTestVC" customModule="DebugWifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -136,7 +136,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRb-fa-mwB">
-                                <rect key="frame" x="262" y="504" width="77" height="30"/>
+                                <rect key="frame" x="60" y="504" width="77" height="30"/>
                                 <state key="normal" title="Test Speed">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -150,6 +150,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKj-is-qdj">
+                                <rect key="frame" x="431" y="504" width="86" height="30"/>
+                                <state key="normal" title="Dismiss Test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUV-QT-LOg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -158,11 +167,13 @@
                             <constraint firstItem="4vH-7V-hJ4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="107" id="E3Z-q3-7U0"/>
                             <constraint firstItem="Za9-Kp-H3d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GKW-GH-pHn"/>
                             <constraint firstItem="4vH-7V-hJ4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JDN-gn-vOI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tRb-fa-mwB" secondAttribute="bottom" constant="66" id="KQH-zf-6ss"/>
                             <constraint firstItem="5YM-k7-2UG" firstAttribute="trailing" secondItem="Za9-Kp-H3d" secondAttribute="trailing" id="NSh-VM-5XB"/>
-                            <constraint firstItem="tRb-fa-mwB" firstAttribute="top" secondItem="4vH-7V-hJ4" secondAttribute="bottom" constant="8" symbolic="YES" id="TZN-ag-spI"/>
                             <constraint firstItem="4vH-7V-hJ4" firstAttribute="centerX" secondItem="5YM-k7-2UG" secondAttribute="centerX" id="VRJ-70-9uO"/>
                             <constraint firstItem="Za9-Kp-H3d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="245" id="aUw-iN-nOd"/>
-                            <constraint firstItem="tRb-fa-mwB" firstAttribute="centerX" secondItem="4vH-7V-hJ4" secondAttribute="centerX" id="dcN-er-NfG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hKj-is-qdj" secondAttribute="bottom" constant="66" id="dxg-nl-K3x"/>
+                            <constraint firstItem="tRb-fa-mwB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="fE3-wS-HHd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hKj-is-qdj" secondAttribute="trailing" constant="67" id="nJe-b7-kc8"/>
                             <constraint firstItem="4vH-7V-hJ4" firstAttribute="top" secondItem="5YM-k7-2UG" secondAttribute="bottom" constant="8" symbolic="YES" id="p1e-vj-Puu"/>
                             <constraint firstAttribute="trailing" secondItem="4vH-7V-hJ4" secondAttribute="trailing" id="ppQ-XH-zZp"/>
                         </constraints>
@@ -185,7 +196,7 @@
         <!--Network DebugVC-->
         <scene sceneID="lFw-Uf-ETA">
             <objects>
-                <viewController storyboardIdentifier="initTest" id="N0Y-pu-WjG" customClass="NetworkDebugVC" customModule="DebugWifi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NetworkTestVC" id="N0Y-pu-WjG" customClass="NetworkDebugVC" customModule="DebugWifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jJO-ke-tnp"/>
                         <viewControllerLayoutGuide type="bottom" id="HJ4-FZ-pbl"/>

@@ -11,11 +11,12 @@ import Foundation
 
 class MainScreenVC: UIViewController {
     var networkTest: UIViewController?
-
+    var speedTest: UIViewController?
+    
     @IBAction func loadNetworkTestAction(sender: AnyObject)
     {
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        networkTest = storyboard.instantiateViewControllerWithIdentifier("initTest") as! UIViewController
+        networkTest = storyboard.instantiateViewControllerWithIdentifier("NetworkTestVC") as? UIViewController
         self.presentViewController(networkTest!, animated: true, completion: { () -> Void in
             
         });
@@ -24,6 +25,11 @@ class MainScreenVC: UIViewController {
     
     @IBAction func speedTestAction(sender: AnyObject)
     {
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        networkTest = storyboard.instantiateViewControllerWithIdentifier("SpeedTestVC") as? UIViewController
+        self.presentViewController(networkTest!, animated: true, completion: { () -> Void in
+            
+        });
     }
 
 }

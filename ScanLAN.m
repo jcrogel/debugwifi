@@ -48,12 +48,12 @@
     if ([self isIpAddressValid:self.localAddress] && (a.count == 4) && (b.count == 4)) {
         for (int i = 0; i<4; i++) {
             
-            int and =  (long)[[a objectAtIndex:i] integerValue] & [[b objectAtIndex:i] integerValue];
+            long and =  (long)[[a objectAtIndex:i] integerValue] & [[b objectAtIndex:i] integerValue];
             if (!self.baseAddress.length) {
-                self.baseAddress = [NSString stringWithFormat:@"%d", and];
+                self.baseAddress = [NSString stringWithFormat:@"%ld", and];
             }
             else {
-                self.baseAddress = [NSString stringWithFormat:@"%@.%d", self.baseAddress, and];
+                self.baseAddress = [NSString stringWithFormat:@"%@.%ld", self.baseAddress, and];
                 self.currentHostAddress = and;
                 self.baseAddressEnd = and;
             }
@@ -69,27 +69,21 @@
 
 - (void)pingAddress{
     self.currentHostAddress++;
-    NSString *address = [NSString stringWithFormat:@"%@%d", self.baseAddress, self.currentHostAddress];
+    NSString *address = [NSString stringWithFormat:@"%@%ld", self.baseAddress, (long)self.currentHostAddress];
     [SimplePingHelper ping:address target:self sel:@selector(pingResult:)];
     if (self.currentHostAddress>=254) {
         [self.timer invalidate];
     }
 }
-/*
- - (void)pingAddress:(NSString *)address{
- [SimplePingHelper ping:address target:self sel:@selector(pingResult:)];
- }
- */
+
 - (void)pingResult:(NSNumber*)success {
     self.timerIterationNumber++;
     if (success.boolValue) {
-        //NSLog(@"SUCCESS");
-        NSString *deviceIPAddress = [[[[NSString stringWithFormat:@"%@%d", self.baseAddress, self.currentHostAddress] stringByReplacingOccurrencesOfString:@".0" withString:@"."] stringByReplacingOccurrencesOfString:@".00" withString:@"."] stringByReplacingOccurrencesOfString:@".." withString:@".0."];
-        NSString *deviceName = [self getHostFromIPAddress:[[NSString stringWithFormat:@"%@%d", self.baseAddress, self.currentHostAddress] cStringUsingEncoding:NSASCIIStringEncoding]];
+        NSString *deviceIPAddress = [[[[NSString stringWithFormat:@"%@%ld", self.baseAddress, self.currentHostAddress] stringByReplacingOccurrencesOfString:@".0" withString:@"."] stringByReplacingOccurrencesOfString:@".00" withString:@"."] stringByReplacingOccurrencesOfString:@".." withString:@".0."];
+        NSString *deviceName = [self getHostFromIPAddress:[[NSString stringWithFormat:@"%@%ld", self.baseAddress, self.currentHostAddress] cStringUsingEncoding:NSASCIIStringEncoding]];
         [self.delegate scanLANDidFindNewAdrress:deviceIPAddress havingHostName:deviceName];
     }
     else {
-        //NSLog(@"FAILURE");
     }
     if (self.timerIterationNumber+self.baseAddressEnd>=254) {
         [self.delegate scanLANDidFinishScanning];
