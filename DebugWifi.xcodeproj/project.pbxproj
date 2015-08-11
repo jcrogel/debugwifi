@@ -7,12 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A60597DF8940E5A8D60C992 /* libPods-DebugWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2510484E2A0D11DF9778D5 /* libPods-DebugWifi.a */; };
+		E930B5481B718C17004EF743 /* NetworkDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = E930B5471B718C17004EF743 /* NetworkDebug.swift */; };
+		E930B54A1B7194E6004EF743 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930B5491B7194E6004EF743 /* SystemConfiguration.framework */; };
+		E930B54D1B71B50E004EF743 /* Reachability in Resources */ = {isa = PBXBuildFile; fileRef = E930B54C1B71B50E004EF743 /* Reachability */; };
+		E948DE3F1B5F5D4600ED6DDE /* ObjCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E948DE3E1B5F5D4600ED6DDE /* ObjCUtils.m */; };
+		E94A11361B7651880081CAE4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94A11351B7651880081CAE4 /* CFNetwork.framework */; };
+		E94A113C1B7729360081CAE4 /* CustomRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = E94A113B1B7729360081CAE4 /* CustomRoute.m */; };
+		E9744B1A1B7A3F8A0040CFAC /* NetworkDebugStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9744B191B7A3F8A0040CFAC /* NetworkDebugStatus.swift */; };
+		E9744B1D1B7A7DE50040CFAC /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9744B1C1B7A7DE50040CFAC /* MainScreenVC.swift */; };
+		E9A46AB91B66DED3004BA2B7 /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A46AB81B66DED3004BA2B7 /* TSViewController.swift */; };
 		E9B384221B5D999F00FC4F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B384211B5D999F00FC4F1E /* AppDelegate.swift */; };
-		E9B384241B5D999F00FC4F1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B384231B5D999F00FC4F1E /* ViewController.swift */; };
+		E9B384241B5D999F00FC4F1E /* SpeedTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B384231B5D999F00FC4F1E /* SpeedTestVC.swift */; };
 		E9B384271B5D999F00FC4F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B384251B5D999F00FC4F1E /* Main.storyboard */; };
 		E9B384291B5D999F00FC4F1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B384281B5D999F00FC4F1E /* Images.xcassets */; };
 		E9B3842C1B5D999F00FC4F1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B3842A1B5D999F00FC4F1E /* LaunchScreen.xib */; };
 		E9B384381B5D999F00FC4F1E /* DebugWifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B384371B5D999F00FC4F1E /* DebugWifiTests.swift */; };
+		E9CB5F421B6028700016BCE3 /* NearbyDeviceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB5F411B6028700016BCE3 /* NearbyDeviceCollectionViewCell.swift */; };
+		E9CB5F5E1B60A5CC0016BCE3 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CB5F571B60A5CC0016BCE3 /* Device.m */; };
+		E9CB5F5F1B60A5CC0016BCE3 /* ScanLAN.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CB5F591B60A5CC0016BCE3 /* ScanLAN.m */; };
+		E9CB5F601B60A5CC0016BCE3 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CB5F5B1B60A5CC0016BCE3 /* SimplePing.m */; };
+		E9CB5F611B60A5CC0016BCE3 /* SimplePingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CB5F5D1B60A5CC0016BCE3 /* SimplePingHelper.m */; };
+		E9F8AE3A1B71B92400A34810 /* NetworkDebugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8AE391B71B92400A34810 /* NetworkDebugVC.swift */; };
+		E9F8AE441B71BD5500A34810 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F8AE431B71BD5500A34810 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +43,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		154E487C75F3AD5F7EB83872 /* Pods-DebugWifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugWifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DebugWifi/Pods-DebugWifi.debug.xcconfig"; sourceTree = "<group>"; };
+		A22BD7E255843277BC6410B3 /* Pods-DebugWifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugWifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-DebugWifi/Pods-DebugWifi.release.xcconfig"; sourceTree = "<group>"; };
+		CB2510484E2A0D11DF9778D5 /* libPods-DebugWifi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DebugWifi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E930B5471B718C17004EF743 /* NetworkDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDebug.swift; sourceTree = "<group>"; };
+		E930B5491B7194E6004EF743 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E930B54C1B71B50E004EF743 /* Reachability */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Reachability; path = External/Reachability; sourceTree = "<group>"; };
+		E948DE3E1B5F5D4600ED6DDE /* ObjCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCUtils.m; sourceTree = "<group>"; };
+		E948DE401B5F5D6D00ED6DDE /* ObjCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCUtils.h; sourceTree = "<group>"; };
+		E94A11351B7651880081CAE4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E94A11371B76521B0081CAE4 /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		E94A11391B7728910081CAE4 /* CustomRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRoute.h; sourceTree = "<group>"; };
+		E94A113B1B7729360081CAE4 /* CustomRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomRoute.m; sourceTree = "<group>"; };
+		E9744B191B7A3F8A0040CFAC /* NetworkDebugStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDebugStatus.swift; sourceTree = "<group>"; };
+		E9744B1C1B7A7DE50040CFAC /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		E9A46AB81B66DED3004BA2B7 /* TSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
 		E9B3841C1B5D999F00FC4F1E /* DebugWifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebugWifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B384201B5D999F00FC4F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9B384211B5D999F00FC4F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9B384231B5D999F00FC4F1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9B384231B5D999F00FC4F1E /* SpeedTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestVC.swift; sourceTree = "<group>"; };
 		E9B384261B5D999F00FC4F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9B384281B5D999F00FC4F1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E9B3842B1B5D999F00FC4F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E9B384311B5D999F00FC4F1E /* DebugWifiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DebugWifiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B384361B5D999F00FC4F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9B384371B5D999F00FC4F1E /* DebugWifiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugWifiTests.swift; sourceTree = "<group>"; };
+		E9CB5F411B6028700016BCE3 /* NearbyDeviceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyDeviceCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9CB5F561B60A5CC0016BCE3 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		E9CB5F571B60A5CC0016BCE3 /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		E9CB5F581B60A5CC0016BCE3 /* ScanLAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanLAN.h; sourceTree = "<group>"; };
+		E9CB5F591B60A5CC0016BCE3 /* ScanLAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanLAN.m; sourceTree = "<group>"; };
+		E9CB5F5A1B60A5CC0016BCE3 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		E9CB5F5B1B60A5CC0016BCE3 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		E9CB5F5C1B60A5CC0016BCE3 /* SimplePingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePingHelper.h; sourceTree = "<group>"; };
+		E9CB5F5D1B60A5CC0016BCE3 /* SimplePingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePingHelper.m; sourceTree = "<group>"; };
+		E9CFC15B1B5ED9F700AF350F /* DebugWifi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DebugWifi-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9F8AE391B71B92400A34810 /* NetworkDebugVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDebugVC.swift; sourceTree = "<group>"; };
+		E9F8AE431B71BD5500A34810 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = External/Reachability/Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94A11361B7651880081CAE4 /* CFNetwork.framework in Frameworks */,
+				E930B54A1B7194E6004EF743 /* SystemConfiguration.framework in Frameworks */,
+				0A60597DF8940E5A8D60C992 /* libPods-DebugWifi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +103,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E930B54B1B71B466004EF743 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				E930B54C1B71B50E004EF743 /* Reachability */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		E940EA031B73E8B9006A424E /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				E9B384251B5D999F00FC4F1E /* Main.storyboard */,
+				E9744B1C1B7A7DE50040CFAC /* MainScreenVC.swift */,
+				E9B3842A1B5D999F00FC4F1E /* LaunchScreen.xib */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		E940EA041B73E8D8006A424E /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB5F411B6028700016BCE3 /* NearbyDeviceCollectionViewCell.swift */,
+			);
+			name = MainScreen;
+			sourceTree = "<group>";
+		};
+		E940EA051B73E8EF006A424E /* TestConnection */ = {
+			isa = PBXGroup;
+			children = (
+				E930B5471B718C17004EF743 /* NetworkDebug.swift */,
+				E9F8AE391B71B92400A34810 /* NetworkDebugVC.swift */,
+				E9744B191B7A3F8A0040CFAC /* NetworkDebugStatus.swift */,
+			);
+			name = TestConnection;
+			sourceTree = "<group>";
+		};
+		E9744B1B1B7A7DBF0040CFAC /* SpeedTest */ = {
+			isa = PBXGroup;
+			children = (
+				E9B384231B5D999F00FC4F1E /* SpeedTestVC.swift */,
+			);
+			name = SpeedTest;
+			sourceTree = "<group>";
+		};
 		E9B384131B5D999F00FC4F1E = {
 			isa = PBXGroup;
 			children = (
+				E9F8AE431B71BD5500A34810 /* Reachability.m */,
+				E930B54B1B71B466004EF743 /* External */,
+				E9CB5F551B60A52D0016BCE3 /* ScanLAN */,
 				E9B3841E1B5D999F00FC4F1E /* DebugWifi */,
 				E9B384341B5D999F00FC4F1E /* DebugWifiTests */,
 				E9B3841D1B5D999F00FC4F1E /* Products */,
+				EF7BE69C263F65441DDE12DD /* Pods */,
+				F740B071E3EA1DA94162255B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +173,13 @@
 		E9B3841E1B5D999F00FC4F1E /* DebugWifi */ = {
 			isa = PBXGroup;
 			children = (
+				E9C92A661B73264C003558FD /* Utils */,
+				E9C92A651B732635003558FD /* UI */,
 				E9B384211B5D999F00FC4F1E /* AppDelegate.swift */,
-				E9B384231B5D999F00FC4F1E /* ViewController.swift */,
-				E9B384251B5D999F00FC4F1E /* Main.storyboard */,
+				E9A46AB81B66DED3004BA2B7 /* TSViewController.swift */,
 				E9B384281B5D999F00FC4F1E /* Images.xcassets */,
-				E9B3842A1B5D999F00FC4F1E /* LaunchScreen.xib */,
 				E9B3841F1B5D999F00FC4F1E /* Supporting Files */,
+				E9CFC15B1B5ED9F700AF350F /* DebugWifi-Bridging-Header.h */,
 			);
 			path = DebugWifi;
 			sourceTree = "<group>";
@@ -112,6 +209,63 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E9C92A651B732635003558FD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E9744B1B1B7A7DBF0040CFAC /* SpeedTest */,
+				E940EA051B73E8EF006A424E /* TestConnection */,
+				E940EA041B73E8D8006A424E /* MainScreen */,
+				E940EA031B73E8B9006A424E /* StoryBoards */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		E9C92A661B73264C003558FD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E94A113B1B7729360081CAE4 /* CustomRoute.m */,
+				E94A11391B7728910081CAE4 /* CustomRoute.h */,
+				E94A11371B76521B0081CAE4 /* route.h */,
+				E948DE3E1B5F5D4600ED6DDE /* ObjCUtils.m */,
+				E948DE401B5F5D6D00ED6DDE /* ObjCUtils.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		E9CB5F551B60A52D0016BCE3 /* ScanLAN */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB5F561B60A5CC0016BCE3 /* Device.h */,
+				E9CB5F571B60A5CC0016BCE3 /* Device.m */,
+				E9CB5F581B60A5CC0016BCE3 /* ScanLAN.h */,
+				E9CB5F591B60A5CC0016BCE3 /* ScanLAN.m */,
+				E9CB5F5A1B60A5CC0016BCE3 /* SimplePing.h */,
+				E9CB5F5B1B60A5CC0016BCE3 /* SimplePing.m */,
+				E9CB5F5C1B60A5CC0016BCE3 /* SimplePingHelper.h */,
+				E9CB5F5D1B60A5CC0016BCE3 /* SimplePingHelper.m */,
+			);
+			name = ScanLAN;
+			sourceTree = "<group>";
+		};
+		EF7BE69C263F65441DDE12DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				154E487C75F3AD5F7EB83872 /* Pods-DebugWifi.debug.xcconfig */,
+				A22BD7E255843277BC6410B3 /* Pods-DebugWifi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F740B071E3EA1DA94162255B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E94A11351B7651880081CAE4 /* CFNetwork.framework */,
+				E930B5491B7194E6004EF743 /* SystemConfiguration.framework */,
+				CB2510484E2A0D11DF9778D5 /* libPods-DebugWifi.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +273,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9B3843B1B5D999F00FC4F1E /* Build configuration list for PBXNativeTarget "DebugWifi" */;
 			buildPhases = (
+				D8F7647245DACF3E21C63760 /* Check Pods Manifest.lock */,
 				E9B384181B5D999F00FC4F1E /* Sources */,
 				E9B384191B5D999F00FC4F1E /* Frameworks */,
 				E9B3841A1B5D999F00FC4F1E /* Resources */,
+				5D30C5C8D14B4B378561FA31 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,6 +317,7 @@
 				TargetAttributes = {
 					E9B3841B1B5D999F00FC4F1E = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = PNTEA38VS9;
 					};
 					E9B384301B5D999F00FC4F1E = {
 						CreatedOnToolsVersion = 6.4;
@@ -193,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B384271B5D999F00FC4F1E /* Main.storyboard in Resources */,
+				E930B54D1B71B50E004EF743 /* Reachability in Resources */,
 				E9B3842C1B5D999F00FC4F1E /* LaunchScreen.xib in Resources */,
 				E9B384291B5D999F00FC4F1E /* Images.xcassets in Resources */,
 			);
@@ -207,13 +365,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D30C5C8D14B4B378561FA31 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DebugWifi/Pods-DebugWifi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8F7647245DACF3E21C63760 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E9B384181B5D999F00FC4F1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9B384241B5D999F00FC4F1E /* ViewController.swift in Sources */,
+				E9CB5F5F1B60A5CC0016BCE3 /* ScanLAN.m in Sources */,
+				E9B384241B5D999F00FC4F1E /* SpeedTestVC.swift in Sources */,
+				E9744B1A1B7A3F8A0040CFAC /* NetworkDebugStatus.swift in Sources */,
 				E9B384221B5D999F00FC4F1E /* AppDelegate.swift in Sources */,
+				E948DE3F1B5F5D4600ED6DDE /* ObjCUtils.m in Sources */,
+				E930B5481B718C17004EF743 /* NetworkDebug.swift in Sources */,
+				E9744B1D1B7A7DE50040CFAC /* MainScreenVC.swift in Sources */,
+				E9F8AE3A1B71B92400A34810 /* NetworkDebugVC.swift in Sources */,
+				E9CB5F5E1B60A5CC0016BCE3 /* Device.m in Sources */,
+				E9CB5F611B60A5CC0016BCE3 /* SimplePingHelper.m in Sources */,
+				E9CB5F601B60A5CC0016BCE3 /* SimplePing.m in Sources */,
+				E9A46AB91B66DED3004BA2B7 /* TSViewController.swift in Sources */,
+				E9CB5F421B6028700016BCE3 /* NearbyDeviceCollectionViewCell.swift in Sources */,
+				E94A113C1B7729360081CAE4 /* CustomRoute.m in Sources */,
+				E9F8AE441B71BD5500A34810 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,21 +544,39 @@
 		};
 		E9B3843C1B5D999F00FC4F1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 154E487C75F3AD5F7EB83872 /* Pods-DebugWifi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Discovery\"",
+					External,
+				);
 				INFOPLIST_FILE = DebugWifi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DebugWifi/DebugWifi-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		E9B3843D1B5D999F00FC4F1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A22BD7E255843277BC6410B3 /* Pods-DebugWifi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Discovery\"",
+					External,
+				);
 				INFOPLIST_FILE = DebugWifi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DebugWifi/DebugWifi-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +633,7 @@
 				E9B3843D1B5D999F00FC4F1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E9B3843E1B5D999F00FC4F1E /* Build configuration list for PBXNativeTarget "DebugWifiTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +642,7 @@
 				E9B384401B5D999F00FC4F1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
