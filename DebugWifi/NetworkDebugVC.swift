@@ -12,13 +12,11 @@ import Foundation
 import SystemConfiguration.CaptiveNetwork
 
 class NetworkDebugVC: UIViewController,
-                        UITableViewDataSource,
-                        UITableViewDelegate,
                         NetworkDebugStatusDelegate{
     
-    @IBOutlet weak var statusTable: UITableView!
     @IBOutlet weak var progressbar: MBCircularProgressBarView!
     
+    @IBOutlet weak var state_label: UILabel!
     
     var timer:NSTimer?
     var t_tmp = 0;
@@ -30,12 +28,12 @@ class NetworkDebugVC: UIViewController,
     
     @IBAction func rerun_test(sender: UIButton) {
         self.step_index = 0
+        self.progressbar.percent = 0
         for step in steps
         {
             step.reset()
         }
         
-        self.statusTable.reloadData()
         self.runNextStep()
     }
     
@@ -50,9 +48,6 @@ class NetworkDebugVC: UIViewController,
     
     override func viewDidLoad() {
         
-        self.statusTable.delegate = self;
-        self.statusTable.dataSource = self;
-        
         for step in steps
         {
             step.delegate = self
@@ -63,31 +58,22 @@ class NetworkDebugVC: UIViewController,
         self.progressbar.progressAngle = 60
         self.progressbar.progressRotationAngle = 0
         self.progressbar.percent = 0
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(3), target: self, selector: Selector("removeme"), userInfo: nil, repeats: true)
         
     }
     
-    func removeme()
+    func _runStep() -> Void
     {
-        if self.progressbar.percent<100
-        {
-            self.progressbar.percent += CGFloat(100 / self.steps.count);
-        }
-        else
-        {
-            timer?.invalidate()
-        }
-
+        self.state_label.text = self.steps[step_index].step_label
+        self.steps[step_index].run()
     }
+    
     
     func runNextStep() -> Void
     {
         if (step_index != self.steps.count)
         {
             self.steps[step_index].delegate = self
-            self.statusTable.reloadData()
-            self.steps[step_index].run()
-            self.statusTable.reloadData()
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(0.2), target: self, selector: Selector("_runStep"), userInfo: nil, repeats: false)
         }
     }
     
@@ -95,18 +81,24 @@ class NetworkDebugVC: UIViewController,
     {
         if self.steps[step_index].status == true
         {
+            self.progressbar.percent += CGFloat(100 / self.steps.count);
             self.step_index++
-
-            var time = DISPATCH_TIME_NOW + (1000 * NSEC_PER_SEC)
-            dispatch_after(
-                time,
-                dispatch_get_main_queue(),
-                { () -> Void in
-                    self.runNextStep()
-                })
             
+            if (self.step_index == self.steps.count)
+            {
+                self.state_label.text = "Success!"
+            }
+            else
+            {
+                var time = DISPATCH_TIME_NOW + (1000 * NSEC_PER_SEC)
+                dispatch_after(
+                    time,
+                    dispatch_get_main_queue(),
+                    { () -> Void in
+                        self.runNextStep()
+                })
+            }
         }
-        self.statusTable.reloadData()
     }
     
     func stepWillRun()->Void
@@ -114,47 +106,5 @@ class NetworkDebugVC: UIViewController,
     
     }
     
-    func tableView(tableView: UITableView,
-        cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    {
-        var cell = tableView.dequeueReusableCellWithIdentifier("NetworkDebugCell", forIndexPath: indexPath) as! CustomTableCell
-
-        if indexPath.item < self.step_index + 1 && indexPath.item < self.steps.count
-        {
-            var step:NetworkDebugStatus = self.steps[indexPath.item] as NetworkDebugStatus
-            cell.nameLabel.text = step.step_label
-
-            if step.complete
-            {
-                if step.status == true
-                {
-                    cell.accessoryImage.image = UIImage(named:"thumbs_up")
-                }
-                else
-                {
-                    cell.accessoryImage.image = UIImage(named:"thumbs_down")
-                }
-            }
-        }
-        
-        return cell;
-    }
-    
-    func tableView(tableView: UITableView,
-        numberOfRowsInSection section: Int) -> Int
-    {
-        if (step_index) < steps.count
-        {
-            return step_index + 1;
-        }
-        else
-        {
-            return steps.count
-        }
-    }
 }
 
-class CustomTableCell:UITableViewCell {
-    @IBOutlet private weak var nameLabel:UILabel!
-    @IBOutlet weak var accessoryImage: UIImageView!
-}
