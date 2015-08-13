@@ -550,8 +550,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Discovery\"",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
 					External,
 				);
 				INFOPLIST_FILE = DebugWifi/Info.plist;
@@ -569,8 +568,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Discovery\"",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
 					External,
 				);
 				INFOPLIST_FILE = DebugWifi/Info.plist;

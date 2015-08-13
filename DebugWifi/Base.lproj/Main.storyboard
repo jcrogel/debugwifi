@@ -36,15 +36,27 @@
                                     <action selector="loadNetworkTestAction:" destination="kM5-T8-tGt" eventType="touchUpInside" id="WYY-gh-5IN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WifiName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jND-UW-6MB">
+                                <rect key="frame" x="32" y="28" width="568" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="U4b-Sy-VY4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jND-UW-6MB" secondAttribute="trailing" id="2le-Go-A62"/>
+                            <constraint firstItem="jND-UW-6MB" firstAttribute="leading" secondItem="kKV-4y-gIA" secondAttribute="leadingMargin" constant="16" id="7jI-u2-h2Y"/>
                             <constraint firstItem="rHj-O5-WBc" firstAttribute="width" secondItem="kKV-4y-gIA" secondAttribute="width" id="9Dy-Tv-sli"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rHj-O5-WBc" secondAttribute="trailing" constant="245" id="9nx-mS-aqE"/>
                             <constraint firstItem="rHj-O5-WBc" firstAttribute="centerY" secondItem="kKV-4y-gIA" secondAttribute="centerY" id="HOe-Ks-wVV"/>
                             <constraint firstItem="m6e-U6-Awj" firstAttribute="top" secondItem="rHj-O5-WBc" secondAttribute="bottom" constant="27" id="JPo-gd-Cce"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m6e-U6-Awj" secondAttribute="trailing" constant="234" id="SiN-PF-Tcr"/>
                             <constraint firstItem="rHj-O5-WBc" firstAttribute="leading" secondItem="kKV-4y-gIA" secondAttribute="leadingMargin" constant="77" id="VUi-Uo-cSf"/>
+                            <constraint firstItem="jND-UW-6MB" firstAttribute="top" secondItem="5CZ-Yb-2VX" secondAttribute="bottom" constant="8" symbolic="YES" id="cMp-vy-4cN"/>
                             <constraint firstItem="rHj-O5-WBc" firstAttribute="leading" secondItem="m6e-U6-Awj" secondAttribute="leading" id="wGC-Kq-rcZ"/>
                         </constraints>
                         <variation key="default">
@@ -55,6 +67,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="wifiName" destination="jND-UW-6MB" id="syO-pf-jQP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBF-sA-4Kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,7 +244,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kbD-dF-Jwl">
-                                <rect key="frame" x="0.0" y="106" width="600" height="410"/>
+                                <rect key="frame" x="0.0" y="106" width="600" height="288"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kbD-dF-Jwl" secondAttribute="height" multiplier="60:41" id="O2u-mH-AV9"/>
@@ -281,6 +296,15 @@
                                     <action selector="rerun_test:" destination="N0Y-pu-WjG" eventType="touchUpInside" id="FbD-M4-rMt"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUx-41-17X" customClass="MBCircularProgressBarView">
+                                <rect key="frame" x="218" y="402" width="137" height="137"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -329,6 +353,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="progressbar" destination="OUx-41-17X" id="SAC-9P-gWp"/>
                         <outlet property="statusTable" destination="kbD-dF-Jwl" id="OvM-cD-ljQ"/>
                     </connections>
                 </viewController>

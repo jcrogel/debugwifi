@@ -18,6 +18,31 @@ class NetworkDebug: NSObject, SimplePingDelegate
         super.init()
     }
     
+    func getWifiNetwork() -> String
+    {
+        let interfaces = CNCopySupportedInterfaces()
+        if interfaces != nil {
+            
+            let interfacesArray = interfaces.takeRetainedValue() as! [String]
+            
+            if interfacesArray.count > 0 {
+                
+                let interfaceName = interfacesArray[0] as String
+                
+                let unsafeInterfaceData = CNCopyCurrentNetworkInfo(interfaceName)
+                
+                if unsafeInterfaceData != nil {
+                    
+                    let interfaceData = unsafeInterfaceData.takeRetainedValue() as Dictionary!
+                    var ssid = interfaceData["SSID"] as! String
+                    return ssid
+                    
+                }
+            }
+        }
+        return ""
+    }
+    
     
     func getDefaultGateway() -> String
     {

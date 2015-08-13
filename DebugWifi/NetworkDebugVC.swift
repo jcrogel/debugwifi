@@ -17,7 +17,11 @@ class NetworkDebugVC: UIViewController,
                         NetworkDebugStatusDelegate{
     
     @IBOutlet weak var statusTable: UITableView!
-
+    @IBOutlet weak var progressbar: MBCircularProgressBarView!
+    
+    
+    var timer:NSTimer?
+    var t_tmp = 0;
     var step_array = []
     var steps:[NetworkDebugStatus] = [HasWifi() , CheckIp(), PingGateway(),
                                     PingExternalIP(), PingGoogle()]
@@ -39,6 +43,11 @@ class NetworkDebugVC: UIViewController,
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    
+    override func viewDidAppear(animated: Bool) {
+        self.runNextStep()
+    }
+    
     override func viewDidLoad() {
         
         self.statusTable.delegate = self;
@@ -49,7 +58,26 @@ class NetworkDebugVC: UIViewController,
             step.delegate = self
         }
         
-        self.runNextStep()
+        self.progressbar.emptyLineWidth = 1.0
+        self.progressbar.progressLineWidth = 1.0
+        self.progressbar.progressAngle = 60
+        self.progressbar.progressRotationAngle = 0
+        self.progressbar.percent = 0
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(3), target: self, selector: Selector("removeme"), userInfo: nil, repeats: true)
+        
+    }
+    
+    func removeme()
+    {
+        if self.progressbar.percent<100
+        {
+            self.progressbar.percent += CGFloat(100 / self.steps.count);
+        }
+        else
+        {
+            timer?.invalidate()
+        }
+
     }
     
     func runNextStep() -> Void

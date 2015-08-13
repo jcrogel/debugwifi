@@ -16,4 +16,5 @@
 #import "Device.h"
 #import "ObjCUtils.h"
 #import "CustomRoute.h"
+#import "MBCircularProgressBar/MBCircularProgressBarView.h"
 #endif
