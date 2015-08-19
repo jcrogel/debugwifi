@@ -37,4 +37,11 @@ class MainScreenVC: UIViewController {
         });
     }
 
+    @IBAction func loadNetworkMap(sender: AnyObject) {
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        networkTest = storyboard.instantiateViewControllerWithIdentifier("NetworkMapVC") as? UIViewController
+        self.presentViewController(networkTest!, animated: true, completion: { () -> Void in
+            
+        });
+    }
 }

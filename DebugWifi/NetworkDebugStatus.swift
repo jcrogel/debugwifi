@@ -106,14 +106,12 @@ class PingStatus: NetworkDebugStatus, SimplePingDelegate
     func simplePing(pinger: SimplePing!, didReceivePingResponsePacket packet: NSData!) {
         self.status = true
         self.complete = true
-        //self.pinger.stop()
         self.delegate?.stepHasCompleted()
     }
     
     func simplePing(pinger: SimplePing!, didFailToSendPacket packet: NSData!, error: NSError!) {
         self.status = false
         self.complete = true
-        //self.pinger.stop()
         self.delegate?.stepHasCompleted()
     }
 }
