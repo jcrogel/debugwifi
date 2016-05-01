@@ -13,9 +13,12 @@ import GoogleMaps
 
 class NetworkMapVC:UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate
 {
-    
+    //From Network Test
 
+    @IBOutlet weak var NetBasicTest: NetworkBasicTestView!
     @IBOutlet weak var mapView_: GMSMapView!
+    @IBOutlet weak var progressbar: MBCircularProgressBarView!
+    
     var points:[CLLocation] = []
     var loc_mgr:CLLocationManager?
     var gateway_coords:CLLocation?
@@ -53,7 +56,21 @@ class NetworkMapVC:UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
         mapView_.delegate = self
 
         mapView_.addObserver(self, forKeyPath: "myLocation" , options: nil, context: nil)
-
+        
+        
+        //self.NetBasicTest =  [self addSubview:
+        //    [[[NSBundle mainBundle] loadNibNamed:@"MyCustomTimerView"
+        //    owner:self
+        //    options:nil] objectAtIndex:0]];
+        //println(self.NetBasicTest.subviews)
+        self.NetBasicTest.setWifiNetwork()
+    }
+    
+    
+    
+    private func doNetworkBasicTest()
+    {
+    
     }
     
     override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
@@ -69,10 +86,6 @@ class NetworkMapVC:UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
         
 
         
-    }
-    
-    @IBAction func dismiss_vc_action(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil);
     }
     
     @IBAction func addPoint(sender: AnyObject) {

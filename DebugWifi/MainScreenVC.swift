@@ -12,10 +12,10 @@ import Foundation
 class MainScreenVC: UIViewController {
     var networkTest: UIViewController?
     var speedTest: UIViewController?
-    @IBOutlet weak var wifiName: UILabel!
     
     override func viewDidLoad() -> Void {
-        self.wifiName.text = NetworkDebug().getWifiNetwork()
+        //self.wifiName.text = NetworkDebug().getWifiNetwork()
+        
     }
     
     @IBAction func loadNetworkTestAction(sender: AnyObject)
@@ -44,4 +44,5 @@ class MainScreenVC: UIViewController {
             
         });
     }
+    
 }

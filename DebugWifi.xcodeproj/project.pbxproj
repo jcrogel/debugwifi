@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A60597DF8940E5A8D60C992 /* libPods-DebugWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2510484E2A0D11DF9778D5 /* libPods-DebugWifi.a */; };
-		E924AB801B84C67700C3F6FA /* NetworkTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E924AB7F1B84C67700C3F6FA /* NetworkTestVC.xib */; };
+		E924AB821B8559CA00C3F6FA /* NetworkBasicTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E924AB811B8559CA00C3F6FA /* NetworkBasicTestView.xib */; };
+		E924AB841B855AC500C3F6FA /* NetworkBasicTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E924AB831B855AC500C3F6FA /* NetworkBasicTestView.swift */; };
 		E930B5481B718C17004EF743 /* NetworkDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = E930B5471B718C17004EF743 /* NetworkDebug.swift */; };
 		E930B54A1B7194E6004EF743 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930B5491B7194E6004EF743 /* SystemConfiguration.framework */; };
 		E930B54D1B71B50E004EF743 /* Reachability in Resources */ = {isa = PBXBuildFile; fileRef = E930B54C1B71B50E004EF743 /* Reachability */; };
@@ -33,7 +34,6 @@
 		E9CB5F5F1B60A5CC0016BCE3 /* ScanLAN.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CB5F591B60A5CC0016BCE3 /* ScanLAN.m */; };
 		E9CB5F601B60A5CC0016BCE3 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CB5F5B1B60A5CC0016BCE3 /* SimplePing.m */; };
 		E9CB5F611B60A5CC0016BCE3 /* SimplePingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CB5F5D1B60A5CC0016BCE3 /* SimplePingHelper.m */; };
-		E9F8AE3A1B71B92400A34810 /* NetworkDebugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8AE391B71B92400A34810 /* NetworkDebugVC.swift */; };
 		E9F8AE441B71BD5500A34810 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F8AE431B71BD5500A34810 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,8 @@
 		154E487C75F3AD5F7EB83872 /* Pods-DebugWifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugWifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DebugWifi/Pods-DebugWifi.debug.xcconfig"; sourceTree = "<group>"; };
 		A22BD7E255843277BC6410B3 /* Pods-DebugWifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugWifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-DebugWifi/Pods-DebugWifi.release.xcconfig"; sourceTree = "<group>"; };
 		CB2510484E2A0D11DF9778D5 /* libPods-DebugWifi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DebugWifi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E924AB7F1B84C67700C3F6FA /* NetworkTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkTestVC.xib; sourceTree = "<group>"; };
+		E924AB811B8559CA00C3F6FA /* NetworkBasicTestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkBasicTestView.xib; sourceTree = "<group>"; };
+		E924AB831B855AC500C3F6FA /* NetworkBasicTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkBasicTestView.swift; sourceTree = "<group>"; };
 		E930B5471B718C17004EF743 /* NetworkDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDebug.swift; sourceTree = "<group>"; };
 		E930B5491B7194E6004EF743 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E930B54C1B71B50E004EF743 /* Reachability */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Reachability; path = External/Reachability; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		E9CB5F5C1B60A5CC0016BCE3 /* SimplePingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePingHelper.h; sourceTree = "<group>"; };
 		E9CB5F5D1B60A5CC0016BCE3 /* SimplePingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePingHelper.m; sourceTree = "<group>"; };
 		E9CFC15B1B5ED9F700AF350F /* DebugWifi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DebugWifi-Bridging-Header.h"; sourceTree = "<group>"; };
-		E9F8AE391B71B92400A34810 /* NetworkDebugVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDebugVC.swift; sourceTree = "<group>"; };
 		E9F8AE431B71BD5500A34810 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = External/Reachability/Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E9B384251B5D999F00FC4F1E /* Main.storyboard */,
-				E924AB7F1B84C67700C3F6FA /* NetworkTestVC.xib */,
+				E924AB811B8559CA00C3F6FA /* NetworkBasicTestView.xib */,
 				E9B3842A1B5D999F00FC4F1E /* LaunchScreen.xib */,
 			);
 			name = StoryBoards;
@@ -147,8 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				E930B5471B718C17004EF743 /* NetworkDebug.swift */,
-				E9F8AE391B71B92400A34810 /* NetworkDebugVC.swift */,
 				E9744B191B7A3F8A0040CFAC /* NetworkDebugStatus.swift */,
+				E924AB831B855AC500C3F6FA /* NetworkBasicTestView.swift */,
 			);
 			name = TestConnection;
 			sourceTree = "<group>";
@@ -338,6 +338,7 @@
 		E9B384141B5D999F00FC4F1E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Juan C Moreno";
 				TargetAttributes = {
@@ -381,10 +382,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B384271B5D999F00FC4F1E /* Main.storyboard in Resources */,
+				E924AB821B8559CA00C3F6FA /* NetworkBasicTestView.xib in Resources */,
 				E930B54D1B71B50E004EF743 /* Reachability in Resources */,
 				E9B3842C1B5D999F00FC4F1E /* LaunchScreen.xib in Resources */,
 				E9B384291B5D999F00FC4F1E /* Images.xcassets in Resources */,
-				E924AB801B84C67700C3F6FA /* NetworkTestVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,10 +440,10 @@
 				E9B384241B5D999F00FC4F1E /* SpeedTestVC.swift in Sources */,
 				E9744B1A1B7A3F8A0040CFAC /* NetworkDebugStatus.swift in Sources */,
 				E9B384221B5D999F00FC4F1E /* AppDelegate.swift in Sources */,
+				E924AB841B855AC500C3F6FA /* NetworkBasicTestView.swift in Sources */,
 				E948DE3F1B5F5D4600ED6DDE /* ObjCUtils.m in Sources */,
 				E930B5481B718C17004EF743 /* NetworkDebug.swift in Sources */,
 				E9744B1D1B7A7DE50040CFAC /* MainScreenVC.swift in Sources */,
-				E9F8AE3A1B71B92400A34810 /* NetworkDebugVC.swift in Sources */,
 				E9CB5F5E1B60A5CC0016BCE3 /* Device.m in Sources */,
 				E9CB5F611B60A5CC0016BCE3 /* SimplePingHelper.m in Sources */,
 				E9CB5F601B60A5CC0016BCE3 /* SimplePing.m in Sources */,

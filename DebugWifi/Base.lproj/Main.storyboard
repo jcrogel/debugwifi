@@ -1,89 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kM5-T8-tGt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bJn-Ew-F8y">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Main ScreenVC-->
-        <scene sceneID="lk0-cF-To8">
-            <objects>
-                <viewController id="kM5-T8-tGt" customClass="MainScreenVC" customModule="DebugWifi" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5CZ-Yb-2VX"/>
-                        <viewControllerLayoutGuide type="bottom" id="tLL-DS-UtO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kKV-4y-gIA">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-O5-WBc">
-                                <rect key="frame" x="93" y="285" width="77" height="30"/>
-                                <state key="normal" title="Speed Test">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="speedTestAction:" destination="kM5-T8-tGt" eventType="touchUpInside" id="u6O-3T-wBM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6e-U6-Awj">
-                                <rect key="frame" x="93" y="342" width="90" height="30"/>
-                                <state key="normal" title="Test Network">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loadNetworkTestAction:" destination="kM5-T8-tGt" eventType="touchUpInside" id="WYY-gh-5IN"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WifiName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jND-UW-6MB">
-                                <rect key="frame" x="32" y="28" width="568" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="U4b-Sy-VY4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lq5-bq-Gcu">
-                                <rect key="frame" x="93" y="409" width="93" height="30"/>
-                                <state key="normal" title="Map Network">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loadNetworkMap:" destination="kM5-T8-tGt" eventType="touchUpInside" id="fGz-gO-WiH"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jND-UW-6MB" secondAttribute="trailing" id="2le-Go-A62"/>
-                            <constraint firstItem="jND-UW-6MB" firstAttribute="leading" secondItem="kKV-4y-gIA" secondAttribute="leadingMargin" constant="16" id="7jI-u2-h2Y"/>
-                            <constraint firstItem="rHj-O5-WBc" firstAttribute="width" secondItem="kKV-4y-gIA" secondAttribute="width" id="9Dy-Tv-sli"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rHj-O5-WBc" secondAttribute="trailing" constant="245" id="9nx-mS-aqE"/>
-                            <constraint firstItem="rHj-O5-WBc" firstAttribute="centerY" secondItem="kKV-4y-gIA" secondAttribute="centerY" id="HOe-Ks-wVV"/>
-                            <constraint firstItem="m6e-U6-Awj" firstAttribute="top" secondItem="rHj-O5-WBc" secondAttribute="bottom" constant="27" id="JPo-gd-Cce"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="m6e-U6-Awj" secondAttribute="trailing" constant="234" id="SiN-PF-Tcr"/>
-                            <constraint firstItem="rHj-O5-WBc" firstAttribute="leading" secondItem="kKV-4y-gIA" secondAttribute="leadingMargin" constant="77" id="VUi-Uo-cSf"/>
-                            <constraint firstItem="jND-UW-6MB" firstAttribute="top" secondItem="5CZ-Yb-2VX" secondAttribute="bottom" constant="8" symbolic="YES" id="cMp-vy-4cN"/>
-                            <constraint firstItem="rHj-O5-WBc" firstAttribute="leading" secondItem="m6e-U6-Awj" secondAttribute="leading" id="wGC-Kq-rcZ"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="9Dy-Tv-sli"/>
-                                <exclude reference="9nx-mS-aqE"/>
-                                <exclude reference="SiN-PF-Tcr"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="wifiName" destination="jND-UW-6MB" id="syO-pf-jQP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iBF-sA-4Kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-199" y="113"/>
-        </scene>
         <!--Network MapVC-->
         <scene sceneID="eHC-Eo-dkJ">
             <objects>
@@ -96,17 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNr-lR-vMN">
-                                <rect key="frame" x="456" y="469" width="54" height="30"/>
-                                <state key="normal" title="Dismiss">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="dismiss_vc_action:" destination="bJn-Ew-F8y" eventType="touchUpInside" id="Mre-z8-toD"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7O5-UP-gDq" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="69" width="568" height="392"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kqJ-GA-GPG" customClass="NetworkBasicTestView" customModule="DebugWifi" customModuleProvider="target">
+                                <rect key="frame" x="16" y="11" width="568" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA8-O4-A1O">
-                                <rect key="frame" x="127" y="469" width="68" height="30"/>
+                                <rect key="frame" x="266" y="469" width="68" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Add Point">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -114,29 +38,30 @@
                                     <action selector="addPoint:" destination="bJn-Ew-F8y" eventType="touchUpInside" id="MRl-sZ-ioh"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7O5-UP-gDq" customClass="GMSMapView">
-                                <rect key="frame" x="16" y="28" width="568" height="433"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7O5-UP-gDq" firstAttribute="leading" secondItem="a83-ec-9iC" secondAttribute="leadingMargin" id="66g-eF-Mob"/>
-                            <constraint firstItem="7O5-UP-gDq" firstAttribute="top" secondItem="qlv-pQ-t3x" secondAttribute="bottom" constant="8" id="7GL-NR-E85"/>
-                            <constraint firstItem="7O5-UP-gDq" firstAttribute="trailing" secondItem="a83-ec-9iC" secondAttribute="trailingMargin" id="Gdk-tW-pFK"/>
-                            <constraint firstAttribute="bottom" secondItem="hA8-O4-A1O" secondAttribute="bottom" constant="20" symbolic="YES" id="Mbm-GY-fsV"/>
-                            <constraint firstItem="hA8-O4-A1O" firstAttribute="baseline" secondItem="ZNr-lR-vMN" secondAttribute="baseline" id="NgD-rz-bMB"/>
-                            <constraint firstItem="hA8-O4-A1O" firstAttribute="leading" secondItem="a83-ec-9iC" secondAttribute="leading" constant="131" id="P5w-3R-HLL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZNr-lR-vMN" secondAttribute="trailing" constant="78" id="PsU-ci-uf9"/>
+                            <constraint firstItem="7O5-UP-gDq" firstAttribute="leading" secondItem="kqJ-GA-GPG" secondAttribute="leading" id="7Pe-AZ-IZD"/>
+                            <constraint firstItem="kqJ-GA-GPG" firstAttribute="leading" secondItem="a83-ec-9iC" secondAttribute="leadingMargin" id="8VP-Fd-dRU"/>
+                            <constraint firstAttribute="centerX" secondItem="7O5-UP-gDq" secondAttribute="centerX" id="9Ta-8L-HMc"/>
+                            <constraint firstItem="hA8-O4-A1O" firstAttribute="leading" secondItem="a83-ec-9iC" secondAttribute="leadingMargin" constant="250" id="D8M-nd-UeV"/>
+                            <constraint firstItem="7O5-UP-gDq" firstAttribute="top" secondItem="qlv-pQ-t3x" secondAttribute="bottom" constant="49" id="Hly-cJ-TgV"/>
+                            <constraint firstItem="kqJ-GA-GPG" firstAttribute="top" secondItem="qlv-pQ-t3x" secondAttribute="bottom" constant="-9" id="doh-Hn-9nF"/>
+                            <constraint firstItem="hA8-O4-A1O" firstAttribute="top" secondItem="7O5-UP-gDq" secondAttribute="bottom" constant="8" symbolic="YES" id="hX5-FE-Cd0"/>
+                            <constraint firstItem="kqJ-GA-GPG" firstAttribute="trailing" secondItem="a83-ec-9iC" secondAttribute="trailingMargin" id="kj8-66-hjb"/>
+                            <constraint firstItem="7O5-UP-gDq" firstAttribute="top" secondItem="kqJ-GA-GPG" secondAttribute="bottom" constant="8" symbolic="YES" id="l8I-oD-C7q"/>
+                            <constraint firstItem="8J4-G7-B4o" firstAttribute="top" secondItem="hA8-O4-A1O" secondAttribute="bottom" constant="101" id="o7j-A9-I1e"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="NetBasicTest" destination="kqJ-GA-GPG" id="B4y-8G-5P4"/>
                         <outlet property="mapView_" destination="7O5-UP-gDq" id="bfh-JV-UMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Be-Sh-znf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="454" y="48"/>
+            <point key="canvasLocation" x="444" y="55"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1xO-Lb-maz">
@@ -152,12 +77,14 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WifiName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za9-Kp-H3d">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="37"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CrP-q8-NpB">
                                 <rect key="frame" x="0.0" y="36" width="600" height="498"/>
+                                <animations/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TNO-7u-IZu">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -171,18 +98,21 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <animations/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cv-6P-wpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-871" y="543"/>
+            <point key="canvasLocation" x="-1005" y="507"/>
         </scene>
         <!--Speed TestVC-->
         <scene sceneID="tne-QT-ifu">
@@ -198,6 +128,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4vH-7V-hJ4">
                                 <rect key="frame" x="0.0" y="107" width="600" height="389"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="389" id="16q-F6-JaZ"/>
@@ -210,7 +141,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NearbyDeviceCollectionViewCell" id="lBQ-Rd-3xe" customClass="NearbyDeviceCollectionViewCell" customModule="DebugWifi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="126" height="68"/>
@@ -218,13 +149,16 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VB-eP-QYb">
                                                     <rect key="frame" x="8" y="32" width="104" height="21"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <animations/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottomMargin" secondItem="0VB-eP-QYb" secondAttribute="bottom" constant="7" id="Rq1-u6-OPb"/>
@@ -250,8 +184,9 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YM-k7-2UG">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YM-k7-2UG">
                                 <rect key="frame" x="16" y="69" width="568" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Scan Network">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -259,14 +194,16 @@
                                     <action selector="ScanLANButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lC4-9J-uxc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRb-fa-mwB">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRb-fa-mwB">
                                 <rect key="frame" x="60" y="504" width="77" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Test Speed">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKj-is-qdj">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKj-is-qdj">
                                 <rect key="frame" x="431" y="504" width="86" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Dismiss Test">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -275,6 +212,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5YM-k7-2UG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AHR-6k-JrU"/>
@@ -298,126 +236,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-223" y="900"/>
-        </scene>
-        <!--Network DebugVC-->
-        <scene sceneID="lFw-Uf-ETA">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lYq-Ak-SsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="NetworkTestVC" id="N0Y-pu-WjG" customClass="NetworkDebugVC" customModule="DebugWifi" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jJO-ke-tnp"/>
-                        <viewControllerLayoutGuide type="bottom" id="HJ4-FZ-pbl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="N9s-AH-oes">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verifying Network configuration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft2-PT-GQd">
-                                <rect key="frame" x="181" y="47" width="239.5" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="hUA-u4-pzr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="hUA-u4-pzr"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB7-hh-gGD">
-                                <rect key="frame" x="468" y="550" width="86" height="30"/>
-                                <state key="normal" title="Dismiss Test">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="dismiss_vc:" destination="N0Y-pu-WjG" eventType="touchUpInside" id="ij2-ja-JHE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd3-vr-0hM">
-                                <rect key="frame" x="73" y="550" width="41" height="30"/>
-                                <state key="normal" title="Rerun">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="rerun_test:" destination="N0Y-pu-WjG" eventType="touchUpInside" id="FbD-M4-rMt"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUx-41-17X" customClass="MBCircularProgressBarView">
-                                <rect key="frame" x="107" y="87" width="386" height="386"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressCapType">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxj-5Y-t3v">
-                                <rect key="frame" x="16" y="460" width="568" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="lxj-5Y-t3v" firstAttribute="leading" secondItem="N9s-AH-oes" secondAttribute="leadingMargin" id="4s6-Mp-ikb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OUx-41-17X" secondAttribute="trailing" constant="100" id="7iA-jL-XC5"/>
-                            <constraint firstItem="ft2-PT-GQd" firstAttribute="centerX" secondItem="N9s-AH-oes" secondAttribute="centerX" id="8Dw-DM-jJV"/>
-                            <constraint firstItem="ft2-PT-GQd" firstAttribute="top" secondItem="jJO-ke-tnp" secondAttribute="bottom" constant="20" id="Aa6-8C-HMI"/>
-                            <constraint firstAttribute="centerY" secondItem="OUx-41-17X" secondAttribute="centerY" constant="-7.5" id="BI5-Md-SFl"/>
-                            <constraint firstItem="OUx-41-17X" firstAttribute="width" secondItem="N9s-AH-oes" secondAttribute="height" multiplier="1:1" constant="1000" id="Bcg-rL-pxd"/>
-                            <constraint firstItem="HJ4-FZ-pbl" firstAttribute="top" secondItem="YB7-hh-gGD" secondAttribute="bottom" constant="20" id="Dpm-sb-Om0"/>
-                            <constraint firstAttribute="centerY" secondItem="YB7-hh-gGD" secondAttribute="centerY" constant="-265" id="F6B-tf-B7t"/>
-                            <constraint firstItem="Rd3-vr-0hM" firstAttribute="leading" secondItem="N9s-AH-oes" secondAttribute="leadingMargin" constant="57" id="G9Z-H7-mLi"/>
-                            <constraint firstAttribute="centerX" secondItem="ft2-PT-GQd" secondAttribute="centerX" id="L9f-Kv-fSM"/>
-                            <constraint firstAttribute="centerX" secondItem="YB7-hh-gGD" secondAttribute="centerX" id="RaC-6K-24o"/>
-                            <constraint firstItem="OUx-41-17X" firstAttribute="leading" secondItem="N9s-AH-oes" secondAttribute="leadingMargin" constant="101" id="aP9-HX-1cP"/>
-                            <constraint firstItem="HJ4-FZ-pbl" firstAttribute="top" secondItem="OUx-41-17X" secondAttribute="bottom" constant="158" id="gLh-Hm-KF5"/>
-                            <constraint firstItem="OUx-41-17X" firstAttribute="width" secondItem="N9s-AH-oes" secondAttribute="height" id="hec-Dd-F0o"/>
-                            <constraint firstItem="OUx-41-17X" firstAttribute="top" secondItem="jJO-ke-tnp" secondAttribute="bottom" constant="55" id="lFI-Vp-NzW"/>
-                            <constraint firstAttribute="centerX" secondItem="OUx-41-17X" secondAttribute="centerX" constant="-15" id="nhM-VN-gVE"/>
-                            <constraint firstItem="lxj-5Y-t3v" firstAttribute="trailing" secondItem="N9s-AH-oes" secondAttribute="trailingMargin" id="nuW-BC-rgs"/>
-                            <constraint firstItem="HJ4-FZ-pbl" firstAttribute="top" secondItem="Rd3-vr-0hM" secondAttribute="bottom" constant="20" id="nul-LU-LIi"/>
-                            <constraint firstItem="ft2-PT-GQd" firstAttribute="top" secondItem="jJO-ke-tnp" secondAttribute="bottom" constant="27" id="o17-ad-KeD"/>
-                            <constraint firstItem="OUx-41-17X" firstAttribute="width" secondItem="N9s-AH-oes" secondAttribute="height" multiplier="83:120" id="obS-NE-4Yv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YB7-hh-gGD" secondAttribute="trailing" constant="30" id="op2-IQ-eOb"/>
-                            <constraint firstItem="ft2-PT-GQd" firstAttribute="width" secondItem="N9s-AH-oes" secondAttribute="width" id="rps-Gw-nMh"/>
-                            <constraint firstItem="HJ4-FZ-pbl" firstAttribute="top" secondItem="YB7-hh-gGD" secondAttribute="bottom" constant="20" id="tZh-U9-J5Z"/>
-                            <constraint firstItem="HJ4-FZ-pbl" firstAttribute="top" secondItem="lxj-5Y-t3v" secondAttribute="bottom" constant="101" id="wbq-Cj-bBM"/>
-                            <constraint firstAttribute="centerY" secondItem="OUx-41-17X" secondAttribute="centerY" constant="-28" id="yXU-49-dnP"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="BI5-Md-SFl"/>
-                                <exclude reference="Bcg-rL-pxd"/>
-                                <exclude reference="hec-Dd-F0o"/>
-                                <exclude reference="nhM-VN-gVE"/>
-                                <exclude reference="obS-NE-4Yv"/>
-                                <exclude reference="yXU-49-dnP"/>
-                                <exclude reference="8Dw-DM-jJV"/>
-                                <exclude reference="Aa6-8C-HMI"/>
-                                <exclude reference="rps-Gw-nMh"/>
-                                <exclude reference="Dpm-sb-Om0"/>
-                                <exclude reference="F6B-tf-B7t"/>
-                                <exclude reference="RaC-6K-24o"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="progressbar" destination="OUx-41-17X" id="SAC-9P-gWp"/>
-                        <outlet property="state_label" destination="lxj-5Y-t3v" id="KdT-C1-F6Q"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="467" y="909"/>
         </scene>
     </scenes>
 </document>

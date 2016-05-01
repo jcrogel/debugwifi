@@ -34,7 +34,7 @@ class SpeedTestVC: UIViewController, UICollectionViewDataSource,
         
         // Do any additional setup after loading the view, typically from a nib.
 
-        self.wifi_label.text = NetworkDebug().getWifiNetwork()
+        //self.wifi_label.text = NetworkDebug().getWifiNetwork()
     }
     
     func scanLAN() -> Void
